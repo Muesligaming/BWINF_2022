@@ -65,11 +65,11 @@ class Keim:
         print(str(self.speed_right) + "; "+str(self.speed_left) + "; "+str(self.speed_up) + "; "+str(self.speed_down) + "; "+str(self.time) + "; " + str(self.color) )
 
 
-#y = int(input("Enter rows: "))
-#x = int(input("Enter colums: "))
-#Anzahl = int(input("Enter Quantities of Keims: "))
+Border_y = int(input("Enter rows: "))
+Border_x = int(input("Enter colums: "))
+Anzahl = int(input("Enter Quantities of Keims: "))
 time = 0
-Border_x, Border_y, Anzahl = 500, 500, 200
+#Border_x, Border_y, Anzahl = 500, 500, 200
 Verzinkt_array= np.array([[255]*Border_x]*Border_y)
 #for lkasdghkljdfksziuwejhbf in range(0,len(Verzinkt_array[0]),2):
 #    Verzinkt_array[0][lkasdghkljdfksziuwejhbf]=254
