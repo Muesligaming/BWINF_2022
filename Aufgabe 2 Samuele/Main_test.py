@@ -1,6 +1,6 @@
-from ast import Not
-from time import time
-from turtle import color
+#from ast import Not
+#from time import time
+#from turtle import color
 from PIL import Image
 import numpy as np
 import random
@@ -106,7 +106,7 @@ class Keim:
         self.speed_down = int(random.random()*5+1)
         self.speed_max = max(self.speed_down,self.speed_left,self.speed_right,self.speed_up)
         #self.speed = int(random.random()*4+1)
-        self.time = int(random.random()*50)
+        self.time = int(random.random()*20)
         self.color = int(random.random()*200+20)
         self.x, self.y = Keim_position(x,y)
         print(str(self.speed_right) + "; "+str(self.speed_left) + "; "+str(self.speed_up) + "; "+str(self.speed_down) + "; "+str(self.time) + "; " + str(self.color) )
@@ -134,13 +134,13 @@ for Keime_Anzahl in range (0,Anzahl):
 time_to_shine=[]
 while Space(Verzinkt_array):
     print("Next Picture \n")
-    final_array = np.array([[255]*Border_x]*Border_y)
-    for y in range(0, Border_y):
-        for x in range(0,Border_x):
-            final_array[y][x] = Verzinkt_array[y][x][0]
-    im = Image.fromarray(final_array.astype('uint8'))
-    im.save("./result.png")
-    im.show()
+    #final_array = np.array([[255]*Border_x]*Border_y)
+    #for y in range(0, Border_y):
+    #    for x in range(0,Border_x):
+    #        final_array[y][x] = Verzinkt_array[y][x][0]
+    #im = Image.fromarray(final_array.astype('uint8'))
+    #im.save("./result.png")
+    #im.show()
     for wachsen in range (0, len(Keime)):
         if Keime[wachsen].time == 0:
             Verzinkt_array = colour_right(Keime[wachsen].color,Keime[wachsen].x,Keime[wachsen].y,Verzinkt_array,0)
