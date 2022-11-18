@@ -100,20 +100,20 @@ def colour_temp(Array):
 
 class Keim: 
     def __init__(self,x,y):
-        self.speed_right = int(random.random()*5+1)
-        self.speed_left = int(random.random()*5+1)
-        self.speed_up = int(random.random()*5+1)
-        self.speed_down = int(random.random()*5+1)
+        self.speed_right = int(random.random()*20+1)
+        self.speed_left = int(random.random()*20+1)
+        self.speed_up = int(random.random()*20+1)
+        self.speed_down = int(random.random()*20+1)
         self.speed_max = max(self.speed_down,self.speed_left,self.speed_right,self.speed_up)
         #self.speed = int(random.random()*4+1)
-        self.time = int(random.random()*20)
+        self.time = int(random.random()*10)
         self.color = int(random.random()*200+20)
         self.x, self.y = Keim_position(x,y)
         print(str(self.speed_right) + "; "+str(self.speed_left) + "; "+str(self.speed_up) + "; "+str(self.speed_down) + "; "+str(self.time) + "; " + str(self.color) )
 
 
-Border_y = int(input("Enter rows: "))
-Border_x = int(input("Enter colums: "))
+Border_y = 768 #int(input("Enter rows: "))
+Border_x = 1024 #int(input("Enter colums: "))
 Anzahl = int(input("Enter Quantities of Keims: "))
 time = 0
 #Border_x, Border_y, Anzahl = 500, 500, 200
@@ -123,6 +123,7 @@ Verzinkt_array= np.array([[[255,0,0,0,0]]*Border_x]*Border_y)
 #    Verzinkt_array[0][lkasdghkljdfksziuwejhbf]=254
 #    Verzinkt_array[0][lkasdghkljdfksziuwejhbf+1]=1
 Keime = {}
+print(type(Keime))
 for Keime_Anzahl in range (0,Anzahl):
     Keim_temp = Keim(Border_x,Border_y)
     Keime[Keime_Anzahl] = Keim_temp
