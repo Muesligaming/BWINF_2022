@@ -123,7 +123,6 @@ Verzinkt_array= np.array([[[255,0,0,0,0]]*Border_x]*Border_y)
 #    Verzinkt_array[0][lkasdghkljdfksziuwejhbf]=254
 #    Verzinkt_array[0][lkasdghkljdfksziuwejhbf+1]=1
 Keime = {}
-print(type(Keime))
 for Keime_Anzahl in range (0,Anzahl):
     Keim_temp = Keim(Border_x,Border_y)
     Keime[Keime_Anzahl] = Keim_temp
